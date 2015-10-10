@@ -1,7 +1,7 @@
 package ai.wit.eval.wit_eval;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -22,7 +22,7 @@ import ai.wit.sdk.Wit;
 import ai.wit.sdk.model.WitOutcome;
 
 
-public class MainActivity extends ActionBarActivity implements IWitListener {
+public class MainActivity extends AppCompatActivity implements IWitListener {
 
     Wit _wit;
 
@@ -30,7 +30,7 @@ public class MainActivity extends ActionBarActivity implements IWitListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String accessToken = "YOUR CLIENT ACCESS TOKEN HERE";
+        String accessToken = "ND46SFSJIBGOHRDGCXROO3365KHAYOT3";
         _wit = new Wit(accessToken, this);
         _wit.enableContextLocation(getApplicationContext());
     }
